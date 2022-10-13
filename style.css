@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 375px){
+  article {
+    padding: 2rem 10rem;
+    background-image: url('svg/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center center;
+  }
+}
+aside {
+  background-image: url('hero-desktop.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+img.logo {
+  margin-bottom: 5rem;
+}
+img.hero-mobile {
+  display: none;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+}
+span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+p {
+  margin-bottom: 1rem;
+  color: hsl(0, 36%, 70%);
+}
+form {
+  display: flex;
+  border-radius: 8rem;
+  height: 3rem;
+  border: none;
+  position: relative;
+}
+input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  border-radius: 8rem;
+  padding: 1rem 5.7rem 1rem 0.7rem;
+  border: 1px solid hsl(0, 36%, 70%);
+}
+input:focus {
+  outline-color: hsl(0, 36%, 70%);
+}
+input::placeholder {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 2rem;
+  border-radius: 8rem;
+  font-size: 2rem;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  color: #fff;
+  transition: opacity 0.2s;
+}
+button:hover {
+  opacity: 0.8;
+}
+.icon-error, small {
+  display: none;
+}
+form.error .icon-error {
+  display: block;
+  position: absolute;
+  right: 26%;
+  top: 25%;
+}
+form.error small {
+  display: block;
+  color: hsl(0, 93%, 68%);
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  margin-top: 5px;
+}
+form.error input{
+  border-color: hsl(0, 93%, 68%);
+}
+
+input:invalid {
+  background-color: powderblue;
+}
+@media screen and (max-width: 375px){
+  body {
+    min-height: 100vh;
+  }
+  .container {
+    display: block;
+  }
+  article {
+    
+  }
+  aside {
+    display: none;
+  }
+  img.logo {
+    margin: 1.5rem;
+    width: 7rem;
+  }
+  img.hero-mobile {
+    width: 100%;
+    display: block;
+  }
+  h1 {
+   font-size: 2rem;
+   text-align: center;
+   margin-top: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+  form {
+    margin: 1rem;
+  }
+  footer {
+    margin-top: 5rem;
+  }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
